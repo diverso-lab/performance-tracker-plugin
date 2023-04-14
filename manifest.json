@@ -1,0 +1,27 @@
+{
+    "name": "Performance Tracker",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "Navigator extension to check the performance levels of GitHub projects",
+    "icons": {
+      "16": "assets/icon16.png",
+      "32": "assets/icon32.png",
+      "64": "assets/icon64.png",
+      "128": "assets/icon128.png"
+    },
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "tabs"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "host_permissions": [
+        "https://github.com/*/*"
+    ],
+    "web_accessible_resources": [{
+      "matches": ["<all_urls>"],
+      "resources": ["assets/*", "elements/*"]
+  }]
+}

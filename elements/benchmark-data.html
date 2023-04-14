@@ -1,0 +1,202 @@
+<ul class="pagehead-actions flex-shrink-0 d-none d-md-inline" style="padding: 2px 0;" id="benchmark-ul">
+    <li>
+        <div data-view-component="true" class="d-flex">
+            <div data-view-component="true" class="position-relative d-inline-block">
+                <a icon="repo-forked" id="fork-button" href=""
+                    data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;FORK_BUTTON&quot;,&quot;repository_id&quot;:24195339,&quot;originating_url&quot;:&quot;https://github.com/angular/angular&quot;,&quot;user_id&quot;:102299434}}"
+                    data-hydro-click-hmac="b6b1491b89237d0629e452d1ecc58dd65411a63706ac403df505a88c23197275"
+                    data-ga-click="Repository, show fork modal, action:files#disambiguate; text:Fork"
+                    data-view-component="true" class="btn-sm btn BtnGroup-item border-right-0"
+                    aria-describedby="tooltip-498de1d9-baba-4cf0-a230-9fd5afcdb042"
+                    style="display: flex; flex-direction: row;">
+                    <div id="benchmark-icon" style="width: 4%; display: flex; justify-content: center; align-items: center;">
+                        <svg
+                            aria-hidden="true" height="16" viewBox="0 0 50 50" version="1.1" width="16"
+                            data-view-component="true" class="octicon octicon-repo-forked mr-2">
+                            <path stroke="currentColor" stroke-width="2" d="M 25 2
+ C 12.308594 2 2 12.308594 2 25
+ C 2 34.832031 8.183594 43.246094 16.875 46.53125
+ C 17.394531 46.71875 17.964844 46.453125 18.15625 45.9375
+ L 23.125 32.84375
+ C 23.226563 32.589844 23.21875 32.308594 23.105469 32.0625
+ C 22.996094 31.8125 22.789063 31.621094 22.53125 31.53125
+ C 19.886719 30.53125 18 28.003906 18 25
+ C 18 21.121094 21.121094 18 25 18
+ C 28.878906 18 32 21.121094 32 25
+ C 32 28.003906 30.113281 30.53125 27.46875 31.53125
+ C 27.210938 31.621094 27.003906 31.8125 26.894531 32.0625
+ C 26.78125 32.308594 26.773438 32.589844 26.875 32.84375
+ L 31.84375 45.9375
+ C 32.035156 46.453125 32.605469 46.71875 33.125 46.53125
+ C 41.816406 43.246094 48 34.832031 48 25
+ C 48 12.308594 37.691406 2 25 2 Z
+ M 25 4
+ C 36.609375 4 46 13.390625 46 25
+ C 46 33.621094 40.730469 40.917969 33.3125 44.15625
+ L 29.0625 32.9375
+ C 31.972656 31.445313 34 28.488281 34 25
+ C 34 20.042969 29.957031 16 25 16
+ C 20.042969 16 16 20.042969 16 25
+ C 16 28.488281 18.027344 31.445313 20.9375 32.9375
+ L 16.6875 44.15625 C 9.269531 40.917969 4 33.621094 4 25
+ C 4 13.390625 13.390625 4 25 4 Z">
+                            </path>
+                        </svg></div>
+                    <div style="padding-left: 1%; display: flex; flex-direction: row; border-left: 1px solid;">
+                        <div style="padding-right: 5%; white-space: break-spaces;">Release Frequency</div>
+                        <div style="padding-top: 2%; padding-right: 6%;">
+                            <div id="release-frequency"></div>
+                            <div style="display: flex; justify-content: center;">
+                                <svg id="releaseFrequency-level" aria-hidden="true" height="16"
+                                    viewBox="0 0 24 24" version="1.1" width="16" data-view-component="true"
+                                    class="octicon octicon-repo-forked mr-2">
+                                    <path id="releaseFrequency-level-arrow-1" fill="none"
+                                        d="M5 19L11.2929 12.7071C11.6834 12.3166 12.3166 12.3166 12.7071 12.7071L19 19"
+                                        stroke="#238636" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path id="releaseFrequency-level-arrow-2" fill="none"
+                                        d="M5 11L11.2929 4.70711C11.6834 4.31658 12.3166 4.31658 12.7071 4.70711L19 11"
+                                        stroke="#238636" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg></div>
+                        </div>
+                    </div>
+                    <div style="padding-left: 1%; display: flex; flex-direction: row; border-left: 1px solid;">
+                        <div style="padding-right: 5%; white-space: break-spaces;">Lead Time For Released Changes</div>
+                        <div style="padding-top: 2%; padding-right: 6%;">
+                            <div id="lead-time-for-released-changes"></div>
+                            <div style="display: flex; justify-content: center;">
+                                <svg id="leadTimeForReleasedChanges-level" aria-hidden="true" height="16"
+                                    viewBox="0 0 24 24" version="1.1" width="16" data-view-component="true"
+                                    class="octicon octicon-repo-forked mr-2">
+                                    <path id="leadTimeForReleasedChanges-level-arrow-1" fill="none"
+                                        d="M5 19L11.2929 12.7071C11.6834 12.3166 12.3166 12.3166 12.7071 12.7071L19 19"
+                                        stroke="#238636" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path id="leadTimeForReleasedChanges-level-arrow-2" fill="none"
+                                        d="M5 11L11.2929 4.70711C11.6834 4.31658 12.3166 4.31658 12.7071 4.70711L19 11"
+                                        stroke="#238636" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg></div>
+                        </div>
+                    </div>
+                    <div style="padding-left: 1%; display: flex; flex-direction: row; border-left: 1px solid;">
+                        <div style="padding-right: 5%; white-space: break-spaces;">Time To Repair Code</div>
+                        <div style="padding-top: 2%; padding-right: 6%;">
+                            <div id="time-to-repair-code"></div>
+                            <div style="display: flex; justify-content: center;">
+                                <svg id="timeToRepairCode-level" aria-hidden="true" height="16"
+                                    viewBox="0 0 24 24" version="1.1" width="16" data-view-component="true"
+                                    class="octicon octicon-repo-forked mr-2">
+                                    <path id="timeToRepairCode-level-arrow-1" fill="none"
+                                        d="M5 19L11.2929 12.7071C11.6834 12.3166 12.3166 12.3166 12.7071 12.7071L19 19"
+                                        stroke="#238636" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path id="timeToRepairCode-level-arrow-2" fill="none"
+                                        d="M5 11L11.2929 4.70711C11.6834 4.31658 12.3166 4.31658 12.7071 4.70711L19 11"
+                                        stroke="#238636" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg></div>
+                        </div>
+                    </div>
+                    <div style="padding-left: 1%; display: flex; flex-direction: row; border-left: 1px solid;">
+                        <div style="padding-right: 5%; white-space: break-spaces;">Bug Issues Rate</div>
+                        <div style="padding-top: 2%; padding-right: 6%;">
+                            <div id="bug-issues-rate"></div>
+                            <div style="display: flex; justify-content: center;">
+                                <svg id="bugIssuesRate-level" aria-hidden="true" height="16"
+                                    viewBox="0 0 24 24" version="1.1" width="16" data-view-component="true"
+                                    class="octicon octicon-repo-forked mr-2">
+                                    <path id="bugIssuesRate-level-arrow-1" fill="none"
+                                        d="M5 19L11.2929 12.7071C11.6834 12.3166 12.3166 12.3166 12.7071 12.7071L19 19"
+                                        stroke="#238636" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path id="bugIssuesRate-level-arrow-2" fill="none"
+                                        d="M5 11L11.2929 4.70711C11.6834 4.31658 12.3166 4.31658 12.7071 4.70711L19 11"
+                                        stroke="#238636" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg></div>
+                        </div>
+                    </div>
+                </a> <tool-tip id="tooltip-498de1d9-baba-4cf0-a230-9fd5afcdb042" for="fork-button" data-direction="s"
+                    data-type="description" data-view-component="true" class="sr-only position-absolute"
+                    role="tooltip"></tool-tip>
+            </div>
+            <details group_item="true" id="my-forks-menu-24195339" data-view-component="true"
+                class="details-reset details-overlay BtnGroup-parent d-inline-block position-relative">
+                <summary aria-label="See your forks of this repository" data-view-component="true"
+                    class="btn-sm btn BtnGroup-item px-2 float-none" aria-haspopup="menu" role="button"
+                    style="min-height: 100%; justify-content: center; align-items: center; display: flex; flex-direction: row;">
+                    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                        data-view-component="true" class="octicon octicon-triangle-down">
+                        <path
+                            d="m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z">
+                        </path>
+                    </svg>
+                </summary>
+                <details-menu class="SelectMenu right-0" role="menu" data-focus-trap="active">
+                    <span id="benchmark-sentinel" tabindex="0" aria-hidden="true">
+                        <div class="SelectMenu-modal benchmark-component-menu-modal">
+                            <header class="SelectMenu-header">
+                                <h3 class="SelectMenu-title">Benchmarking information</h3>
+                                <button id="benchmark-ul-closeButton" class="SelectMenu-closeButton" type="button"
+                                    aria-label="Close menu">
+                                    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                        data-view-component="true" class="octicon octicon-x">
+                                        <path
+                                            d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </header>
+                            <div class="SelectMenu-list" style="display: flex;">
+                                <form>
+                                    <button id="OSS-button" type="button" class="SelectMenu-item flex-items-start" role="menuitemradio" aria-checked="true">
+                                        <span class="f5">
+                                            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1"
+                                                width="16" data-view-component="true"
+                                                class="octicon octicon-check SelectMenu-icon SelectMenu-icon--check">
+                                                <path
+                                                    d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                        <div>
+                                            <div class="f5 text-bold">
+                                                OSS Projects
+                                            </div>
+                                            <div class="text-small color-fg-muted text-normal pb-1">
+                                                Compare your project only considering other OSS projects.
+                                            </div>
+                                        </div>
+                                    </button>
+
+                                    <button id="DORA-button" type="button" class="SelectMenu-item flex-items-start" role="menuitemradio" aria-checked="false">
+                                        <span class="f5">
+                                            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1"
+                                                width="16" data-view-component="true"
+                                                class="octicon octicon-check SelectMenu-icon SelectMenu-icon--check">
+                                                <path
+                                                    d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                        <div>
+                                            <div class="f5 text-bold">
+                                                DORA
+                                            </div>
+                                            <div class="text-small color-fg-muted text-normal pb-1">
+                                                Compare your project considering DevOps organizations.
+                                            </div>
+                                        </div>
+                                    </button>
+
+                                </form>
+                            </div>
+                        </div>
+                    </span>
+                </details-menu>
+            </details>
+        </div>
+    </li>
+</ul>
