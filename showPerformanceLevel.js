@@ -6,7 +6,7 @@ if (document.getElementById("benchmark-ul") == null) {
 
         // CONSTS AND FUNCTIONS /////////////////////////////////////////////////////////////////////////
         const environment = {
-            baseUrl: "http://localhost:8080/",
+            baseUrl: "http://165.22.81.102:8080/",
             benchmark: "OSS",
             metrics: {},
             OSSBenchmark: {},
@@ -19,7 +19,6 @@ if (document.getElementById("benchmark-ul") == null) {
                 URLSplit = URLSplit.slice(0, -1);
             }
             URLSplit = URLSplit.split("/");
-            console.log(URLSplit[3] + "/" + URLSplit[4]);
             return URLSplit[3] + "/" + URLSplit[4];
         }
 
@@ -39,7 +38,6 @@ if (document.getElementById("benchmark-ul") == null) {
                 method: "POST",
                 body: JSON.stringify(data)
             }
-            console.log(b);
             fetch(environment.baseUrl + "requests/new",
                 {
                     method: "POST",
@@ -51,9 +49,8 @@ if (document.getElementById("benchmark-ul") == null) {
                 }).then(json => {
                     if (json.created == true) {
                         disableNewRequestButton();
-                        console.log("Se ha enviado una nueva request");
                     } else {
-                        console.log("No se ha enviado la nueva request");
+                        console.log("No request sent");
                     }
                 }).catch(err => console.log(err));
 
@@ -100,34 +97,28 @@ if (document.getElementById("benchmark-ul") == null) {
         function changeArrows(levels) {
             Object.keys(levels).forEach((metric) => {
                 if (levels[metric] == "lowLevel") {
-                    console.log("estamos en lowlevel");
                     var svg = document.getElementById(metric + "-level");
                     svg.style.transform = 'rotate(180deg)';
                     var arrow1 = document.getElementById(metric + "-level-arrow-1");
                     var arrow2 = document.getElementById(metric + "-level-arrow-2");
                     arrow1.setAttribute("stroke", '#c30e2e');
                     arrow2.setAttribute("stroke", '#c30e2e');
-                    console.log(arrow1);
                 } else if (levels[metric] == "mediumLevel") {
-                    console.log("estamos en mediumlevel");
                     var svg = document.getElementById(metric + "-level");
                     svg.style.transform = 'rotate(90deg)';
                     var arrow1 = document.getElementById(metric + "-level-arrow-1");
                     var arrow2 = document.getElementById(metric + "-level-arrow-2");
                     arrow1.setAttribute("stroke", '#F1E05A');
                     arrow2.setAttribute("stroke", '#F1E05A');
-                    console.log(arrow1);
                 } else if (levels[metric] == "highLevel") {
-                    console.log("estamos en highlevel");
                     var svg = document.getElementById(metric + "-level");
                     svg.style.transform = 'rotate(0deg)';
                     var arrow1 = document.getElementById(metric + "-level-arrow-1");
                     var arrow2 = document.getElementById(metric + "-level-arrow-2");
                     arrow1.setAttribute("stroke", '#238636');
                     arrow2.setAttribute("stroke", '#238636');
-                    console.log(arrow1);
                 } else {
-                    console.log("estamos en ningun level")
+                    console.log("No data");
                 }
             });
         }
@@ -160,17 +151,13 @@ if (document.getElementById("benchmark-ul") == null) {
         function showLevel() {
 
             if (environment.benchmark == "OSS") {
-                console.log("Muestra a OSS");
                 var levels = classifyMetrics(environment.OSSBenchmark, environment.metrics);
-                console.log(levels);
 
                 changeArrows(levels);
                 changeBenchmarkIcon();
 
             } else {
-                console.log("Muestra a DORA");
                 var levels = classifyMetrics(environment.DORABenchmark, environment.metrics);
-                console.log(levels);
 
                 changeArrows(levels);
                 changeBenchmarkIcon();
@@ -223,8 +210,6 @@ if (document.getElementById("benchmark-ul") == null) {
                             }).then(json => {
                                 environment.OSSBenchmark = formatToNumbers(json.OSS);
                                 environment.DORABenchmark = formatToNumbers(json.DORA);
-
-                                console.log(environment);
 
                                 var levels = classifyMetrics(environment.OSSBenchmark, environment.metrics);
                                 changeArrows(levels);
