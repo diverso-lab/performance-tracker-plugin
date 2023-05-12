@@ -6,7 +6,7 @@ if (document.getElementById("benchmark-ul") == null) {
 
         // CONSTS AND FUNCTIONS /////////////////////////////////////////////////////////////////////////
         const environment = {
-            baseUrl: "http://165.22.81.102:8080/",
+            baseUrl: "https://165.22.81.102/",
             benchmark: "OSS",
             metrics: {},
             OSSBenchmark: {},
@@ -167,6 +167,12 @@ if (document.getElementById("benchmark-ul") == null) {
         }
 
         /////////////////////////////////////////////////////////////////////////////////////////////////
+        //<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+        
+        // const metaElement = document.createElement('meta');
+        // metaElement.setAttribute('http-equiv', 'Content-Security-Policy');
+        // metaElement.setAttribute('content', 'upgrade-insecure-requests');
+        // document.getElementsByTagName('head')[0].appendChild(metaElement);
 
         var newDiv = document.createElement("div");
 
